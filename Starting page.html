@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ANIMATED STORY HAUL</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/33/a7/eb/33a7eb475c15ee37a1828ff13f503f95.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://cdn.pixabay.com/animation/2023/07/31/11/25/11-25-56-622_512.gif');
+            background-size: 85%;
+            color: black;
+            text-align: center;
+            padding: 30px;
+        }
+        h1{
+            color: #000;
+            font-size:150px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        p {
+            font-size: 50px;
+            padding-bottom: 12%;
+        }
+        .dropdown-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        select {
+            font-size: 20px;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+        }
+        label {
+            color: white;
+            font-size: 28px;
+        }
+    
+    
+        footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #f1f1f1;
+        text-align: center;
+        padding: 15px 10px;
+        position: absolute;
+        bottom:-150;
+        width: 100%;
+        font-size: 16px; 
+        font-family: Georgia, serif;
+        letter-spacing: 1.5px;
+        word-spacing: 3px; 
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); 
+    }
+
+    label{
+           font-weight: bolder;
+           font-size:50px;
+           color:rgb(224, 224, 34);
+    }
+    p,h2,h3{
+        color: rgb(255, 255, 255);
+        font-family:Georgia, 'Times New Roman', Times, serif ;
+        text-align:center ;
+        font-weight: bold ;
+    }
+  </style>
+
+</style>
+
+    </style>
+    <script>
+        function navigateToPage() {
+            const dropdown = document.getElementById('story-dropdown');
+            const selectedValue = dropdown.value;
+
+            if (selectedValue === 'mythological') {
+                window.location.href = 'krishna.html';
+            } else if (selectedValue === 'love') {
+                window.location.href = 'littlegrl.html';
+            } else if (selectedValue === 'peacock') {
+                window.location.href = 'peacock.html'; 
+            } else if (selectedValue === 'trust') {
+                window.location.href = 'bridge.html';
+            } else if (selectedValue === 'forgotten') {
+                window.location.href = 'forgotten medal.html'; 
+            } else if (selectedValue === 'inspiration'){
+                window.location.href = 'Inspirational stories'
+            } else {
+                alert('No page exists for the selected category.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>STORY TOONS<br></h1>
+        <p>THE ANIMATED STORY HAUL</p>
+    </header>
+    <h2>"Welcome to Story Toons, where imagination comes to life through animated tales."</h2>
+    <h2>About the stories:</h2>
+    <h3> "Explore our collection of heartwarming, adventurous, and thought-provoking animated stories that will transport you to different worlds."</h3>
+    <h2>Categories Introduction:</h2>
+    <h3>"Choose a story category that sparks your interest and dive into captivating narratives filled with magic, emotion, and life lessons."<br><br>
+    "Select a story category below and start your adventure now. Let the animation unfold before your eyes!"</h3>
+
+
+    <div class="dropdown-container">
+        <label for="story-dropdown">Choose a Story Category:</label>
+        <select id="story-dropdown" onchange="navigateToPage()">
+            <option value=""> Select a Category </option>
+            <option value="mythological">Mythological Story</option>
+            <option value="love">Love and Emotion</option>
+            <option value="peacock">The Peacock's Humble Heart</option>
+            <option value="trust">The Bridge of Trust</option>
+            <option value="forgotten">The Forgotten Medal</option>
+            <option value=" Inspiration Stories">Inspirational Stories</option>
+        </select>
+    </div>
+    <h3>"Every story is a journey, and we're thrilled to have you along for the ride. Enjoy the magic of animation and storytelling!"</h3>
+    <p>ENJOY LEARNING!</p>
+    <footer>
+        © 2024 THE ANIMATED STORY HAUL. All rights reserved. Designed by [Hema BL & Lochana K] 
+    </footer>
+</body>
+</html>

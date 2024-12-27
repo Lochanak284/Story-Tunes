@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Forgotten Medal</title>
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/736x/0b/a4/ff/0ba4ffa2d1e8b0ae820de888dd4f8d52.jpg);
+            background-size: 800px;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 900px;
+        }
+        #Container {
+            background-image: url(https://i.pinimg.com/736x/66/0d/b9/660db969e2cb1358af43b7262f3c529f.jpg);
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            border-radius: 12px;
+            width: 60%;
+            padding: 30px;
+            text-align: center;
+        }
+        #Title {
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-family: Georgia, serif;
+            font-weight: 700;
+        }
+        #Paragraph {
+            font-size: 21px;
+            font-weight: bolder;
+            color: #ffffff;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        #Moral {
+            font-weight: bold;
+            font-size: 22px;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+        
+        a {
+            background-color: #2c14e8;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+        }
+        a:hover {
+            background-color: #828ad2;
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <h1 id="Title">The Forgotten Medal</h1>
+        <p id="Paragraph">Amulya and Bilvika were the best of friends, always competing in school races. 
+            One year, Amulya won the gold medal, while Bilvika came second. Amulya noticed Bilvika was upset but didn't say anything.<br><br>
+            Years later, Amulya found the old medal while cleaning her room. Feeling nostalgic, she called Bilvika and invited her over. 
+        </p>
+        <p id="Moral"></p>
+        <button id="Button" onclick="continueStory()">Next</button>
+    </div>
+
+    <script>
+        let storyIndex = 1;
+        const storyParts = [
+            "Years later, Amulya found the old medal while cleaning her room. Feeling nostalgic, she called Bilvika and invited her over.",
+            "When Bilvika arrived, Amulya gave her the medal and said, I wouldn't have run so fast without you pushing me. This belongs to both of us.",
+            "Bilvika was surprised and touched. She laughed and said, But I still beat you in the next race! The friends spent hours reliving their school memories and realized how much they valued each other's support.",
+            "Moral: True friendship isn't about winning or losing; it's about lifting each other up."
+        ];
+
+        function continueStory() {
+            const paragraph = document.getElementById('Paragraph');
+            const moral = document.getElementById('Moral');
+            const button = document.getElementById('Button');
+
+            if (storyIndex < storyParts.length) {
+                paragraph.innerHTML += "<br><br>" + storyParts[storyIndex];
+                storyIndex++;
+            } else {
+                moral.innerHTML = storyParts[storyIndex];
+                button.disabled = true;
+            }
+        }
+    </script>
+
+    <a href="main.html">Back</a>
+</body>
+</html>
